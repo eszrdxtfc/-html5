@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+	body {
+		border: 3px solid black;
+		border-radius: 10px; /* 添加圆角效果，可选 */
+		padding: 20px;
+		position: relative; /* 对边框的定位 */
+	}
+	body::before {
+		content: "";
+		position: absolute;  
+		top: 3px;
+		left: 3px;
+		right: 3px;
+		bottom: 3px;
+		background-color: #CCCCCC;
+		z-index: -1; /* 降级 */
+		border-radius: 7px; /* 可选，与边框的圆角效果保持一致 */
+	}
+</style>
+	<meta charset="UTF-8">
+		<title>个人简历</title>
+	</head>
+	<body>
+	<img src="img/微信图片.jpg" title="微信头像 非本人" width="80" height="120" border="1" hspace="10" vspace="10" align="left" />
+	<p><font face="微软雅黑" size="2" color="#47464E">吴旭说简历</font></p>
+	<p><font face="微软雅黑" size="0.5" color="#47464E">求职意向：网安、技术人员</font></p>
+	<div style="text-align:right;"><b><font face="微软雅黑" color="black" size="3">个人简历</font></b></div>
+	<br />
+	<div style="text-align:right;"><b><font face="微软雅黑" color="#000000" size="1">Personal Resume</font></b></div>
+	<hr />
+	<div style="background:#662577;color:#ffffff;">个人信息</div>
+	<a href="#img-url" onclick="showImage()">    
+ 	<img src="img/gr.jpg" title="微信头像 非本人" width="80" height="115" align="right" title="本人"/ />
+	</a>
+	                                                 <!--
+                                                 	作者：offline
+                                                 	时间：2023-11-02
+                                                 	描述：图片放大打开显示
+                                                 -->
+	<style>
+  .show-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  .show-image img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+</style>
+	<script>
+  function showImage() {
+    var image = document.createElement('div');
+    image.innerHTML = '<img src="img/gr.jpg" align="right" />';
+    image.classList.add('show-image');
+  
+    image.onclick = function() {
+      document.body.removeChild(image);
+    };
+  
+    document.body.appendChild(image);
+  }
+</script>
+	<table>  <!-- 表格制作 -->
+		<tr>
+			<td><img src="img/我的发布.png"width="20" height="20"/></td>
+			<td> &nbsp;&nbsp;18岁</td>
+		</tr>
+		<tr>
+			<td><img src="img/电话.png"width="20" height="20"/></td>
+			<td> &nbsp;&nbsp;19529486992</td>
+		</tr>
+		<tr>
+			<td><img src="img/邮件.png"width="20" height="20"/></td>
+			<td>&nbsp;&nbsp;3488979921@qq.com</td>
+		</tr>
+		<tr>
+			<td><img src="img/位置.png" width="20" height="20"/></td>
+			<td> &nbsp;&nbsp;湖北黄冈</td>
+		</tr>
+	</table>
+	<div style="background:#662577;color:#ffffff;">教育背景</div>
+	<div style="text-align: left;"><font size="1">2023--XXXX &nbsp;&nbsp;&nbsp;&nbsp;武汉船舶职业技术学院 &nbsp;&nbsp;&nbsp;&nbsp;计算机网络技术</font></div>
+	<div style="text-align: left;"><font size="1">主修课程 &nbsp;&nbsp;&nbsp;&nbsp;C语言程序设计 &nbsp;&nbsp;&nbsp;&nbsp;应用英语 &nbsp;&nbsp;&nbsp;&nbsp;应用数学</font></div>
+	<div style="text-align: left;"><font size="1"> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;HTML+CSS+JavaScript &nbsp;&nbsp;&nbsp;&nbsp;思政 &nbsp;&nbsp;&nbsp;&nbsp;心理健康教育......</font></div>
+	<div style="background:#662577;color:#ffffff;">所获证书</div>
+	<div><font size="1"> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/对勾.png" width="15" height="15"/>2021-12-01考得普通话证书二级甲等<a href="https://free.wzznft.com/i/2023/11/01/tvbrdt.jpg">查询</a></font></div>
+	<div><font size="1"> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/对勾.png" width="15" height="15"/>2023-03-02通过中职的网络考试，获得了1+X第六代互联网证书</font></div>
+	<div><font size="1"> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/对勾.png" width="15" height="15"/>2023-09-05考得机动车驾驶证</font></div>
+	<div><font size="1"> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;未完待续......</font></div>
+	<div style="background:#662577;color:#ffffff;">兴趣爱好</div>
+	<div><font size="1"> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/菱形.png" width="15" height="15"/>阅读一些书籍：墨菲定律、浪潮之巅、沟通的艺术等等</font></div>
+	<div><font size="1"> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/菱形.png" width="15" height="15"/>业余羽毛球爱好者、跑步爱好者</font></div>
+	<div><font size="1"> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/菱形.png" width="15" height="15"/>对趣味记忆法、学习方法论有所研究</font></div>
+	<div style="background:#662577;color:#ffffff;">自我评价</div>
+	<div><font size="1"> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;本人性格热情开朗，待人友好，为人真诚谦虚，感觉大学生涯让我的组织协调能力、管理能力、应变能力大大提升，使我具备了良好的心理素质让我在竞争中拥有更大的优势。不足的是较难适应环境，心理有所紧张，喜欢从自身找问题。</font></div>
+</html>
